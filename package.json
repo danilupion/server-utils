@@ -1,0 +1,45 @@
+{
+  "name": "@danilupion/server-utils",
+  "version": "0.1.0",
+  "repository": "git@github.com:danilupion/jarvis-server.git",
+  "author": {
+    "name": "Dani Lupión",
+    "email": "danilupion@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "pretty": "prettier --write",
+    "pretty-all": "yarn pretty \"{src,__tests__}/**/*.js\"",
+    "lint": "eslint",
+    "lint-all": "yarn lint {src,__tests__}/**/*.js",
+    "precommit": "lint-staged && yarn test"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn pretty",
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.0.1",
+    "jest": "^23.6.0",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.3.0",
+    "passport": "^0.4.0",
+    "passport-facebook-token": "^3.3.0",
+    "passport-jwt": "^4.0.0",
+    "shortid": "^2.2.13"
+  }
+}
