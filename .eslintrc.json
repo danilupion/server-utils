@@ -1,0 +1,20 @@
+{
+  "extends": ["eslint:recommended", "airbnb-base", "prettier"],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": ["error", "always-multiline"],
+    "function-paren-newline": ["error", "consistent"],
+    "implicit-arrow-linebreak": "off",
+    "object-curly-newline": ["error", { "consistent": true }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["gulp/**/*.js", "gulpfile.js", "__tests__/**/*.js"]
+      }
+    ]
+  }
+}
