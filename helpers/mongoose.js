@@ -1,11 +1,15 @@
-const mongoose = require('mongoose');
+let connectionPromise;
 
-mongoose.Promise = Promise;
-
-module.exports = {
-  connect: ({ host, port, database }) =>
-    mongoose.connect(
+module.exports = (connect, { host, port, database }) => {
+  if (connectionPromise === undefined) {
+    connectionPromise = connect(
       `mongodb://${host}:${port}/${database}`,
-      { useNewUrlParser: true },
-    ),
+      {
+        useNewUrlParser: true,
+        bufferCommands: false,
+      },
+    );
+  }
+
+  return connectionPromise;
 };
