@@ -30,13 +30,13 @@
     "eslint-plugin-import": "^2.17.3",
     "husky": "^2.4.0",
     "jest": "^24.8.0",
-    "lint-staged": "^8.1.7",
-    "prettier": "^1.17.1"
+    "lint-staged": "^8.2.0",
+    "prettier": "^1.18.2"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",
     "express": "^4.17.1",
-    "mongoose": "^5.5.13",
+    "mongoose": "^5.5.14",
     "passport": "^0.4.0",
     "passport-facebook-token": "^3.3.0",
     "passport-jwt": "^4.0.0",
