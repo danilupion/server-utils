@@ -7,6 +7,8 @@ module.exports = (connect, { host, port, database }) => {
       {
         useNewUrlParser: true,
         bufferCommands: false,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
       },
     );
   }
